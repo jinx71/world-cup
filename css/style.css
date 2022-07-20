@@ -1,3 +1,4 @@
+/* Style Sheet Start */
 /* General Styles for All sheets (index.html, groups.html, upcoming-matches.html) */
 
 body {
@@ -286,9 +287,9 @@ hr {
     color: rgb(239, 237, 237);
 }
 
-/* Mobile View */
+/* Responsive Design : Mobile View */
 
-@media screen and (max-width : 576px) {
+@media screen and (max-width : 768px) {
     header {
         flex-direction: column;
     }
@@ -337,14 +338,14 @@ hr {
 
 }
 
-/* Tab View */
+/*Responsive Design : Tab View */
 
 .view-all {
     margin-bottom: 30px;
     display: none;
 }
 
-@media only screen and (min-width : 834px) and (max-width : 1080px) {
+@media only screen and (min-width : 769px) and (max-width : 992px) {
     header {
         margin: 10px;
     }
@@ -387,3 +388,5 @@ hr {
         flex-wrap: wrap;
     }
 }
+
+/* Style Sheet Ends */
