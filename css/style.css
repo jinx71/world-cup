@@ -1,9 +1,10 @@
+/* General Styles for All sheets (index.html, groups.html, upcoming-matches.html) */
+
 body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    /* border: 1px solid greenyellow; */
     overflow-x: hidden;
 }
 
@@ -12,6 +13,23 @@ a {
     color: black
 }
 
+/* General Button Design */
+.button,
+.watch-live,
+.view-all {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(196, 0, 0);
+    padding: 10px 24px;
+}
+
+.watch-live a,
+.view-all a {
+    color: white;
+    font-size: 18px;
+}
+
+/* Animation key frame for header button */
 @keyframes arrow {
     0% {
         opacity: 1;
@@ -60,31 +78,7 @@ header {
     color: rgb(192, 192, 192);
 }
 
-/* button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
-.button,
-.watch-live,
-.view-all {
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(196, 0, 0);
-    padding: 10px 24px;
-}
-
-.view-all {
-    margin-bottom: 30px;
-    display: none;
-}
-
-.watch-live a,
-.view-all a {
-    color: white;
-    font-size: 18px;
-}
 
 .button .fa-angle-right {
     font-size: 18px;
@@ -100,23 +94,20 @@ header {
     bottom: -7px;
 }
 
-/* Blog Style */
+/* Main Section Design (Navigation & Main Body Section) */
 main {
     display: flex;
     gap: 30px;
     margin: 80px 0px;
-    /* flex-direction: row; */
-    /* justify-content: flex-end; */
 }
 
+/* Navigation Menu Design */
 nav {
-    /* width: 300px; */
     background-color: black;
     height: 230px;
-
     display: flex;
     flex-direction: column;
-    padding: 0px 30px 20px 30px;
+    padding: 0px 30px 0px 30px;
     border-radius: 15px;
 }
 
@@ -135,15 +126,24 @@ nav button:nth-child(2) {
     margin: 0px 0px;
 }
 
+nav button:hover {
+    background-color: rgb(207, 207, 207);
+}
+
 .active {
     background-color: rgb(196, 0, 0);
 
+}
+
+.active:hover {
+    background-color: rgb(196, 0, 0);
 }
 
 .active a {
     color: white;
 }
 
+/* Main Section Design for all sheets */
 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -154,10 +154,15 @@ article {
 .blog,
 .match,
 .groups {
-    /* width: 330px; */
-    border: 1px solid gray;
+    border: 1px solid rgb(219, 219, 219);
     border-radius: 15px;
     box-shadow: 14px 20px 50px -13px rgba(0, 0, 0, 0.375);
+}
+
+.blog:hover,
+.match:hover,
+.groups:hover {
+    box-shadow: 14px 20px 50px -13px rgba(0, 0, 0, 0.545);
 }
 
 .match {
@@ -221,7 +226,13 @@ article {
     padding: 6px 15px;
     border: 1px solid black;
     border-radius: 7px;
+    background-color: transparent;
+    cursor: pointer;
 
+}
+
+.blog-details .blog-button:hover {
+    background-color: #f1f1f1;
 }
 
 .blog-info span i {
@@ -236,7 +247,6 @@ footer {
 }
 
 .footer-wrapper {
-    /* background-color: aqua; */
     margin: 0 auto;
     color: white;
     text-align: center;
@@ -260,17 +270,24 @@ hr {
     margin: 30px;
 }
 
+.footer-menu a:hover {
+    color: rgb(192, 192, 192);
+}
+
 .social-icon {
     margin: 0 auto;
     width: 20%;
     font-size: 32px;
-    /* margin: 30px 0px; */
     display: flex;
     justify-content: space-between;
 }
 
+.social-icon span a:hover {
+    color: rgb(239, 237, 237);
+}
 
 /* Mobile View */
+
 @media screen and (max-width : 576px) {
     header {
         flex-direction: column;
@@ -287,8 +304,6 @@ hr {
     }
 
     .header-description p {
-        /* position: relative; */
-        /* width: 400px; */
         height: 40px;
         overflow: hidden;
         white-space: nowrap;
@@ -303,7 +318,6 @@ hr {
     }
 
     nav {
-        /* flex-direction: row; */
         background-color: transparent;
         padding: 0px;
     }
@@ -315,7 +329,6 @@ hr {
 
     .footer-menu {
         flex-direction: column;
-        /* flex-wrap: wrap; */
     }
 
     .social-icon {
@@ -325,6 +338,12 @@ hr {
 }
 
 /* Tab View */
+
+.view-all {
+    margin-bottom: 30px;
+    display: none;
+}
+
 @media only screen and (min-width : 834px) and (max-width : 1080px) {
     header {
         margin: 10px;
