@@ -110,7 +110,7 @@ main {
 
 /* Navigation Menu Design */
 nav {
-    background-color: black;
+    background-color: var(--general-background);
     height: 230px;
     display: flex;
     flex-direction: column;
